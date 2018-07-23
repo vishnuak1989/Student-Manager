@@ -1,5 +1,5 @@
 export default (state={},action)=>{
-swtich (action.type){
+switch (action.type){
     case "LOGIN":
     return {
         uid:action.uid
@@ -7,7 +7,7 @@ swtich (action.type){
     case "LOGOUT":
     return {
 
-    }
-    default return state
+    };
+    default : return state
 }
 }
