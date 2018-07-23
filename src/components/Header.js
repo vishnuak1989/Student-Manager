@@ -7,7 +7,6 @@ const Header=({startLogOut})=>(
     <h1>Student Manager</h1>
     <NavLink to="/" activeClassName="selected" exact={true}>Dashboard</NavLink>
     <NavLink to="/create" activeClassName="selected">Add a Student</NavLink>
-    <NavLink to="/help" activeClassName="selected">Help</NavLink>
     <button onClick={startLogOut}>Logout</button>
   </header>
 )
