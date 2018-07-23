@@ -6,7 +6,8 @@ export const addStudent=(student)=>({
 });
 
 export const startAddStudent = (studentData = {}) =>{
-  return (dispatch) => {
+  return (dispatch,getState) => {
+    const uid = getState().auth.uid;
     const {
       name="",
       address="",
@@ -16,7 +17,7 @@ export const startAddStudent = (studentData = {}) =>{
       nextClassDate=0
     } = studentData;
     const student = {name,address,fees,phone,note,nextClassDate};
-   return database.ref('students').push(student).then((ref)=>{
+   return database.ref(`users/${uid}/students`).push(student).then((ref)=>{
       dispatch(addStudent({
         id:ref.key,
       ...student
@@ -34,8 +35,9 @@ export const removeStudent=({id} = {})=>({
 });
 
 export const startRemoveStudent=({id}={})=>{
-  return (dispatch)=>{
-    return database.ref(`students/${id}`).remove().then(()=>{
+  return (dispatch,getState)=>{
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/students/${id}`).remove().then(()=>{
       dispatch(removeStudent({id}));
     })
 
@@ -51,8 +53,9 @@ export const editStudent=(id,updates)=>({
 });
 
 export const startEditStudent=(id,updates)=>{
- return (dispatch) => {
-   return database.ref(`students/${id}`).update(updates).then(()=>{
+ return (dispatch,getState) => {
+  const uid = getState().auth.uid;
+   return database.ref(`users/${uid}/students/${id}`).update(updates).then(()=>{
      dispatch(editStudent(id,updates));
    })
  }
@@ -65,8 +68,9 @@ export const setStudents=(students)=>({
 });
 
 export const startSetStudents=()=>{
-  return (dispatch) => {
-    return database.ref('students').once('value').then((snapshot)=>{
+  return (dispatch,getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/students`).once('value').then((snapshot)=>{
       const students = [];
       snapshot.forEach((childSnapshot)=>{
         students.push({

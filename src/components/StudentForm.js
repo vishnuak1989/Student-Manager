@@ -14,7 +14,7 @@ constructor(props){
     fees:props.student ? (props.student.fees/100).toString() :"",
     phone:props.student ? props.student.phone:"",
     note:props.student ? props.student.note:"",
-    createdAt: props.student ? moment(props.student.createdAt): moment(),
+    nextClassDate: props.student ? moment(props.student.nextClassDate): moment(),
     calenderFocused:false,
     error:""
         };
