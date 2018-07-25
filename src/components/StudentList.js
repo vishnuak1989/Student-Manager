@@ -5,12 +5,20 @@ import studentsSelector from '../selectors/students'
 
 export const StudentList = (props) =>(
 
-  <div>
-    { 
-      props.students.length === 0 ?(<p> No students</p>):(props.students.map((student)=>{
+  <div className="container">
+    <div className="list-header">
+    <div>Student</div>
+    <div>Next Class on</div>
+      </div>
+      <div className="list-body">
+      { 
+      props.students.length === 0 ?(<div className="list-item list-item--message"><span> No students</span></div>):(props.students.map((student)=>{
         return <StudentListItem key={student.id} {...student} />
     })
     )}
+
+      </div>
+  
   </div>
 );
 

@@ -17,10 +17,17 @@ export class StudentEditPage extends React.Component{
   render(){
     return(
       <div>
+          <div className="page-header">
+          <div className="container">
+          <h1 className="page-header__title">Edit Student</h1>
+            </div>
+          </div>
+          <div className="container">
         <StudentForm
           student={this.props.student}
           onSubmit={this.onSubmit}/>
-        <button onClick={this.onRemove}>Remove</button>
+        <button className="button button--warning" onClick={this.onRemove}>Remove {this.props.student.name}</button>
+        </div>
       </div>
     )
   }

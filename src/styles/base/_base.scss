@@ -1,8 +1,12 @@
+*{
+  box-sizing:border-box;
+}
 html{
   font-size:62.5%;
 }
 body{
-font-family: 'IBM Plex Serif', serif;
+color:$dark-grey;
+font-family: 'Roboto Condensed', 'serif';
 font-size: $m-size;
 }
 

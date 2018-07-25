@@ -1,0 +1,24 @@
+.button{
+    background-color:$twitter-blue;
+    color:white;
+    border:none;
+    display:inline-block;
+    padding:$s-size;
+    font-weight: 300;
+    font-size:$font-size-large;
+    text-decoration:none;
+    line-height: 1;
+}
+
+.button--purple{
+    background-color:$heroku-purple;
+
+}
+
+.button--link{
+    background:none;
+    cursor:pointer;
+}
+ .button--warning{
+     background-color:#ffae42;
+ }

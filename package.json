@@ -1,5 +1,5 @@
 {
-    "name": "indecision-app",
+    "name": "student-manager-app",
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
@@ -19,6 +19,7 @@
         "babel-loader": "^7.1.4",
         "babel-plugin-syntax-object-rest-spread": "^6.13.0",
         "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-polyfill": "^6.26.0",
         "babel-preset-env": "^1.7.0",
         "babel-preset-react": "^6.24.1",
         "babel-preset-stage-2": "^6.24.1",
@@ -51,8 +52,9 @@
         "sass-loader": "^6.0.7",
         "style-loader": "^0.20.3",
         "uuid": "^3.2.1",
-        "webpack": "^4.8.3",
-        "webpack-cli": "^2.1.4"
+        "webpack": "^4.16.2",
+        "webpack-cli": "^2.1.4",
+        "yarn": "^1.7.0"
     },
     "devDependencies": {
         "babel-jest": "^23.0.0",

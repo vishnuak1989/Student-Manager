@@ -52,7 +52,7 @@ constructor(props){
    onSubmit=(e)=>{
      e.preventDefault();
      if (!this.state.name || !this.state.nextClassDate) {
-      this.setState(()=>({error:"Please rovide name and the date of the next class."}))
+      this.setState(()=>({error:"Please provide name and the date of the next class."}))
      }
      else{
        this.setState(()=>({error:""}))
@@ -70,18 +70,18 @@ constructor(props){
   render(){
     return (
       <div>
-        <form onSubmit={this.onSubmit}>
+        <form className="form" onSubmit={this.onSubmit}>
+        {this.state.error && <p className="form__error">{this.state.error}</p>}
           <label htmlFor="name">Name</label>
-          <input type="text" placeholder="Name" autoFocus value={this.state.name} onChange={this.onNameChange}/>
+          <input type="text" className="input-text" placeholder="Name" autoFocus value={this.state.name} onChange={this.onNameChange}/>
           <label htmlFor="address">Address</label>
-          <input type="text" placeholder="Address" value={this.state.address} onChange={this.onAddressChange}/>
+          <input type="text" className="input-text" placeholder="Address" value={this.state.address} onChange={this.onAddressChange}/>
           <label htmlFor="fees">Fees</label>
-          <input type="text" placeholder="Fees" value={this.state.fees} onChange={this.onFeesChange}/>
+          <input type="text" className="input-text" placeholder="Fees" value={this.state.fees} onChange={this.onFeesChange}/>
           <label htmlFor="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" onChange={this.onPhoneChange} value={this.state.phone}
+          <input type="tel" id="phone" className="input-text" name="phone" onChange={this.onPhoneChange} value={this.state.phone}
             placeholder="XXX-XXX-XXXX"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            required />
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
           <label htmlFor="date">Next Class</label>
           <SingleDatePicker
             date={this.state.nextClassDate}
@@ -92,10 +92,11 @@ constructor(props){
             isOutsideRange={()=>false}
           />
           <label htmlFor="note">Notes</label>
-          <textarea value={this.state.note} placeholder="Notes about the student" onChange={this.onNoteChange}>
+          <textarea className="text-area" value={this.state.note} placeholder="Notes about the student" onChange={this.onNoteChange}>
           </textarea>
-          <button>Save</button>
-          {this.state.error && <p>{this.state.error}</p>}
+          <div><button className="button button--purple">Save Changes</button></div>
+          
+          {this.state.error && <p className="form__error">{this.state.error}</p>}
         </form>
       </div>
     )

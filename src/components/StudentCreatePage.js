@@ -9,9 +9,17 @@ import {startAddStudent} from '../actions/students'
     this.props.history.push('/')
   }
   render(){
-  return(  <div>
-      <h1>Add a new student</h1>
+  return(  
+      <div>
+        <div className="page-header">
+          <div className="container">
+          <h1 className="page-header__title">Add a new student</h1>
+            </div>
+          </div>
+
+      <div className="container">
       <StudentForm onSubmit={this.onSubmit}/>
+      </div>
     </div>
   )
   }

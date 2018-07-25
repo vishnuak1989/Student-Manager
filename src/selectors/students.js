@@ -11,9 +11,9 @@ export default (students,{text="",sortBy,startDate,endDate})=>{
     {
       return a.nextClassDate < b.nextClassDate ? 1 : -1
     }
-    // else if (sortBy === "fees") {
-    //     return a.fees < b.fees ? 1: -1
-    // }
+    else if (sortBy === "fees") {
+        return a.fees < b.fees ? 1: -1
+    }
   })
 
 }

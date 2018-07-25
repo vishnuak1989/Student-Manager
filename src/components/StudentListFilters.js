@@ -25,26 +25,34 @@ onFocusChange=(calenderFocused)=>{
       this.props.sortByAmount()
     }
   }
+  
+  isOutsideRange=()=>{false}
 
 render(){
   return(
-  <div>
-    <input type="text" value={this.props.filters.text} onChange={this.onTextChange}/>
-    <select
+  <div className="container">
+  <div className="input-group">
+    <div className="input-group__item"><input className="input-text" type="text" placeholder="Search by Name"value={this.props.filters.text} onChange={this.onTextChange}/></div>
+    <div className="input-group__item"><select className="select"
       value = {this.props.filters.sortBy}
       onChange={this.onSortChange}>
       <option value="date">Date</option>
       <option value="amount">Amount</option>
-    </select>
+    </select></div>
+    <div className="input-group__item">
     <DateRangePicker
       startDate={this.props.filters.startDate}
       startDateId="StartDate_1"
       endDate={this.props.filters.endDate}
       endDateId="EndDate_1"
+      numberOfMonths={1}
+      isOutsideRange={this.isOutsideRange}
       onDatesChange={this.onDatesChange}
       focusedInput={this.state.calenderFocused}
       onFocusChange={this.onFocusChange}
     />
+    </div>
+    </div>
   </div>
 )
 }};
