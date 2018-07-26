@@ -4,7 +4,7 @@
 #### Back end- Google Firebase
 #### Hosted on - Google Firebase
  
- <a href="https://studentmanager-1eecd.firebaseapp.com/">View the working version of this App </a>
+<a href="https://studentmanager-1eecd.firebaseapp.com/">View the working version of this App</a>
 
 ### Quick User Guide:
 1)  __Login using google:__ <br />
