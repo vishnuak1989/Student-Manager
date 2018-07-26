@@ -7,7 +7,7 @@
 
 ### Quick User Guide:
 1)  __Login using google:__<br/>
-    ![alt text](https://github.com/vishnuak1989/Student-Manager/blob/master/screencaps/Login.png "Login Page")
+    ![alt text](https://github.com/vishnuak1989/Student-Manager/blob/master/screencaps/Login.PNG "Login Page")
 2)  __Dashboard__ page will list all the students who has their next class within the `Date Range` on the filter.<br /> You can search for the students name using `Search by Name` option on the filter.<br /> 
 `Sort By Date and Amount` options are availble on the filter as well.<br />
 As you can see the list has the following details.<br/>
