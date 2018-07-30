@@ -26,7 +26,9 @@ Here you can edit/ remove student. If you want to go back to dashboard without s
 5) Each login has their own seperate list of students.
 
 ```
-Technical Notes:This application is still in it intiial stages and evolving. You are welcome to fork or provide inputs.
+Notes:
+This application is still in it initial stages and evolving. 
+You are welcome to fork or provide inputs.
 New ideas and propositions welcome.
 ````
 <a href="mailto:vishnuak1989@gmail.com?Subject=New%20Idea" target="_top">Send Mail</a>
