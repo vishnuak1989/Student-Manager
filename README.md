@@ -1,8 +1,8 @@
 # Student Manager
 ## Application to Manage Student data for a driving school.
-#### Front end- React + Redux
-#### Back end- Google Firebase
-#### Hosted on - Google Firebase
+#### Front-end : React + Redux
+#### Back-end : Google Firebase
+#### Hosted on : Google Firebase
  
 <a href="https://studentmanager-1eecd.firebaseapp.com/">View the working version of this App</a>
 
