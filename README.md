@@ -12,9 +12,9 @@
 2)  __Dashboard__ page will list all the students who has their next class within the `Date Range` on the filter.<br /> You can search for the students name using `Search by Name` option on the filter.<br /> 
 `Sort By Date and Amount` options are availble on the filter as well.<br />
 As you can see the list has the following details.<br/>
-    1. Name - Name of the Student
-    1. Phone - Touch/Click the icon to call the student
-    1. Next Class on - Date of the next class <br/>
+    i. Name - Name of the Student <br />
+    ii Phone - Touch/Click the icon to call the student <br />
+    iii. Next Class on - Date of the next class <br/>
     <img src="https://raw.githubusercontent.com/vishnuak1989/Student-Manager/master/screencaps/Dashboard.png" />
 3) __Add Student.__<br />
 Here you can add a new student. Then click `Save Changes` to save the details. *If you want to go back to dashboard without saving changes click on the `Student Manager` title on the header.*<br/> 
